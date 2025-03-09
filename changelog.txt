@@ -1,0 +1,16 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2025-03-??
+
+  Features:
+    - This mod is an internal library.  It does nothing by itself.
+    - Requires [space-age] mod to be enabled.
+    - Added Larva egg economy to replace captive biter.
+    - Added recipe to create more larva egg (Biochamber).
+    - Added recipe to convert larva egg to nutrients (Biochamber).
+    - Added recipe to convert larva egg to biter egg (Biochamber).    
+    - Added inefficient recipe to produce uranium-238(10) on Char with larva egg(1), plasma(1) >>> uranium-238(11) (via Plasma Assambling Machine)
+    - Added Synthetic Hatchery for player to build zerg units.
+    - Added Synthetic zerglings, hydralisk, mutalisk, guardian, infested terran and ultralisk as playable units. They are not repairable.
+    - Added Synthetic zerg damage research to upgrade their damage (10x20% tiers).
+    - Synthetic zerg units support team color.

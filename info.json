@@ -1,0 +1,16 @@
+{
+  "name": "erm_zerg_economy",
+  "version": "0.9.0",
+  "date": "2025-03-??",
+  "title": "ERM - Zerg Economy",
+  "author": "heyqule",
+  "description": "Internal Library for ERM zerg economy.  It does nothing by itself.  It requires space-age mod, even tho it listed as optional. It's for base-game compatibility.",
+  "factorio_version": "2.0",
+  "dependencies": [
+    "base >= 2.0.34",
+    "?space-age >= 2.0.0",
+    "enemyracemanager >= 2.0.23",
+    "erm_zerg_hd_assets >= 2.0.0",
+    "erm_unit_control >= 1.0.0"
+  ]
+}
