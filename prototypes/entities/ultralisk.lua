@@ -17,9 +17,9 @@ local name = "ultralisk"
 
 local hitpoint = 400
 
-local resistances = 75
+local resistances = 80
 
-local damage_modifier = 20
+local damage_modifier = 25
 -- Misc settings
 local distraction_cooldown = 30
 
@@ -69,7 +69,7 @@ function Unit.make(prefix, hp_mp, damage_mp)
             selection_box = selection_box,
             sticker_box = selection_box,
             vision_distance = vision_distance,
-            movement_speed = 0.5 * ERMPlayerUnitHelper.get_speed_multiplier(),
+            movement_speed = 0.35 * ERMPlayerUnitHelper.get_speed_multiplier(),
             absorptions_to_join_attack = { pollution = 100},
             distraction_cooldown = distraction_cooldown,
             radar_range = 2,

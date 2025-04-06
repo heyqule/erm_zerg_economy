@@ -37,9 +37,9 @@ function Unit.make(prefix)
             },
             flags = {"placeable-neutral","placeable-player", "player-creation"},
             minable = {mining_time = 1, result = prefix .. "--controllable--hatchery"},
-            max_health = 3000,
-            corpse = prefix .. "--large-base-corpse",
-            dying_explosion = prefix .. "--building-explosion",
+            max_health = 2500,
+            corpse = "zerg--large-base-corpse",
+            dying_explosion = "zerg--building-explosion",
             allow_run_time_change_of_is_military_target = false,
             is_military_target = true,
             circuit_wire_max_distance = erm_zerg_economy_circuit_wire_max_distance,
@@ -67,6 +67,7 @@ function Unit.make(prefix)
                 effectivity = 1,
                 burner_usage = "nutrients",
                 fuel_inventory_size = 1,
+                emissions_per_minute = { pollution = 5 }
             },
             energy_usage = "1MW",
             crafting_categories = {prefix.."--erm_controllable"},
@@ -85,7 +86,7 @@ function Unit.make(prefix)
         },
         {
             type = "corpse",
-            name = prefix.."--large-base-corpse",
+            name = "zerg--large-base-corpse",
             flags = { "placeable-neutral",  "not-on-map" },
             icon = "__erm_zerg_hd_assets__/graphics/entity/icons/buildings/advisor.png",
             icon_size = 64,
@@ -101,7 +102,7 @@ function Unit.make(prefix)
         },
         {
             type = "explosion",
-            name = prefix.."--building-explosion",
+            name = "zerg--building-explosion",
             icon = "__erm_zerg_hd_assets__/graphics/entity/icons/buildings/advisor.png",
             icon_size = 64,
             subgroup = "explosions",

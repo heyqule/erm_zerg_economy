@@ -17,8 +17,8 @@ local name = "hydralisk"
 
 local hitpoint = 120
 
-local resistances = 70
-local damage_modifier = 80
+local resistances = 72
+local damage_modifier = 70
 local distraction_cooldown = 30
 
 

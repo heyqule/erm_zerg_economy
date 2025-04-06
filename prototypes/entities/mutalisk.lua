@@ -18,22 +18,14 @@ local name = "mutalisk"
 
 -- Hitpoints
 
-local hitpoint = 120
+local hitpoint = 160
 
-local resistances = 70
+local resistances = 75
 
 
 -- Handles damages
+local damage_modifier = 35
 
-local damage_modifier = 80
-
--- Handles Attack Speed
-
-local base_movement_speed = 0.3
-local incremental_movement_speed = 0.3
-
--- Misc Settings
-local pollution_to_join_attack = 50
 local distraction_cooldown = 30
 
 
@@ -88,7 +80,7 @@ function Unit.make(prefix, hp_mp, damage_mp)
                 ammo_category = prefix.."--erm_controllable",
                 range = attack_range,
                 min_attack_distance = attack_range - 3,
-                cooldown = 60,
+                cooldown = 30,
                 damage_modifier = damage_modifier * damage_mp,
                 ammo_type = {
                     target_type = "direction",

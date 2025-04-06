@@ -14,7 +14,7 @@ local ZergSound = require("__erm_zerg_hd_assets__/sound")
 local AnimationDB = require("__erm_zerg_hd_assets__/animation_db")
 local name = "infested"
 
-local hitpoint = 75
+local hitpoint = 78
 
 local resistances = 75
 
@@ -71,7 +71,7 @@ function Unit.make(prefix, hp_mp, damage_mp, SDA)
             selection_box = selection_box,
             sticker_box = selection_box,
             vision_distance = vision_distance,
-            movement_speed = 0.3 * ERMPlayerUnitHelper.get_speed_multiplier(),
+            movement_speed = 0.275 * ERMPlayerUnitHelper.get_speed_multiplier(),
             absorptions_to_join_attack = { pollution = 100},
             distraction_cooldown = distraction_cooldown,
             spawning_time_modifier = 1.5,

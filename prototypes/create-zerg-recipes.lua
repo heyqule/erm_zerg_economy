@@ -26,6 +26,13 @@ function ZergItemRecipe.zergling(prefix, ingredients)
         category = prefix.."--erm_controllable",
         amount = 2
     })
+
+    ArmyEconomyHelper.create_deploy_recipe({
+        prefix = prefix,
+        name = 'zergling',
+        icon = "__erm_zerg_hd_assets__/graphics/entity/icons/units/zergling.png",
+        category = prefix.."--erm_controllable",
+    })
 end
 
 function ZergItemRecipe.hydralisk(prefix, ingredients)
@@ -45,6 +52,13 @@ function ZergItemRecipe.hydralisk(prefix, ingredients)
         ingredients = ingredients,
         category = prefix.."--erm_controllable",
         amount = 1
+    })
+
+    ArmyEconomyHelper.create_deploy_recipe({
+        prefix = prefix,
+        name = 'hydralisk',
+        icon = "__erm_zerg_hd_assets__/graphics/entity/icons/units/hydralisk.png",
+        category = prefix.."--erm_controllable",
     })
 end
 
@@ -66,6 +80,13 @@ function ZergItemRecipe.mutalisk(prefix, ingredients)
         category = prefix.."--erm_controllable",
         amount = 1
     })
+
+    ArmyEconomyHelper.create_deploy_recipe({
+        prefix = prefix,
+        name = 'mutalisk',
+        icon = "__erm_zerg_hd_assets__/graphics/entity/icons/units/mutalisk.png",
+        category = prefix.."--erm_controllable",
+    })
 end
 
 function ZergItemRecipe.guardian(prefix, ingredients)
@@ -85,6 +106,13 @@ function ZergItemRecipe.guardian(prefix, ingredients)
         ingredients = ingredients,
         category = prefix.."--erm_controllable",
         amount = 1
+    })
+
+    ArmyEconomyHelper.create_deploy_recipe({
+        prefix = prefix,
+        name = 'guardian',
+        icon = "__erm_zerg_hd_assets__/graphics/entity/icons/units/guardian.png",
+        category = prefix.."--erm_controllable",
     })
 end
 
@@ -106,6 +134,13 @@ function ZergItemRecipe.infested(prefix, ingredients)
         category = prefix.."--erm_controllable",
         amount = 1
     })
+
+    ArmyEconomyHelper.create_deploy_recipe({
+        prefix = prefix,
+        name = 'infested',
+        icon = "__erm_zerg_hd_assets__/graphics/entity/icons/units/infested.png",
+        category = prefix.."--erm_controllable",
+    })
 end
 
 function ZergItemRecipe.ultralisk(prefix, ingredients)
@@ -125,6 +160,13 @@ function ZergItemRecipe.ultralisk(prefix, ingredients)
         ingredients = ingredients,
         category = prefix.."--erm_controllable",
         amount = 1
+    })
+
+    ArmyEconomyHelper.create_deploy_recipe({
+        prefix = prefix,
+        name = 'ultralisk',
+        icon = "__erm_zerg_hd_assets__/graphics/entity/icons/units/ultralisk.png",
+        category = prefix.."--erm_controllable",
     })
 end
 
@@ -224,7 +266,7 @@ function ZergItemRecipe.technologies(prefix)
             prerequisites = {prefix .. "--controllable-unlock"},
             unit =
             {
-                count_formula = "2^(L)*2500",
+                count_formula = "2^(L)*5000",
                 ingredients =
                 {
                     {"automation-science-pack", 1},

@@ -25,7 +25,7 @@ local resistances = 75
 
 -- Handles damages
 
-local damage_modifier = 50
+local damage_modifier = 40
 local distraction_cooldown = 30
 
 
@@ -82,7 +82,7 @@ function Unit.make(prefix, hp_mp, damage_mp)
                 ammo_category = prefix.."--erm_controllable",
                 range = attack_range,
                 min_attack_distance = attack_range - 4,
-                cooldown = 75,
+                cooldown = 45,
                 cooldown_deviation = 0.1,
                 warmup = 12,
                 damage_modifier = damage_modifier * damage_mp,
