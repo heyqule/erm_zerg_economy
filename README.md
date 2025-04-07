@@ -4,7 +4,7 @@ This mod is an internal library to share zerg economy features between zerg enem
 This mod does not add prototype or handle game logic by itself.  It's done in the enemy mod that uses this.
 
 # Features:
-- Added Larva egg economy.
+- Added Larva egg item.
 - Added recipe to create more larva egg (Biochamber).
 - Added recipe to convert larva egg to nutrients (Biochamber).
 - Added recipe to convert larva egg to biter egg (Biochamber).
@@ -15,5 +15,5 @@ This mod does not add prototype or handle game logic by itself.  It's done in th
 - Added zerg damage research to upgrade their damage (10 tiers, up to 200% increase).
 
 # Implementation Guide
-See zerg's prototypes/economy.lua
+See erm_zerg's prototypes/economy.lua
 
