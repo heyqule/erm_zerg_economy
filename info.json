@@ -1,7 +1,7 @@
 {
   "name": "erm_zerg_economy",
-  "version": "1.0.0",
-  "date": "2025-03-??",
+  "version": "1.0.1",
+  "date": "2025-04-11",
   "title": "ERM - Zerg Economy",
   "author": "heyqule",
   "description": "Internal Library for ERM zerg economy.  It does nothing by itself.",
