@@ -1,6 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2025-04-11
+
+  Changes:
+    - Fixed info.json date.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
-Date: 2025-04-??
+Date: 2025-04-11
 
   Features:
     - This mod is an internal library.  It does nothing by itself.
@@ -9,9 +16,10 @@ Date: 2025-04-??
     - [space-age] Added recipe to create more larva egg (Biochamber).
     - [space-age] Added recipe to convert larva egg to nutrients (Biochamber).
     - [space-age] Added recipe to convert larva egg to biter egg (Biochamber).    
-    - [space-age] Added recipe to produce uranium-238(10), larva egg(1), plasma(1) >>> uranium-238(11) (via Plasma Assembling Machine).
-    - [space-age] Added recipe to produce promethium science pack(1), larva egg(1), plasma(1) >>> promethium science pack(2) (via Plasma Assembling Machine).
-    - Added Synthetic Hatchery for player to build zerg units.
-    - Added Synthetic zerglings, hydralisk, mutalisk, guardian, infested terran and ultralisk as playable units. They are not repairable.
-    - Added Synthetic zerg damage research to upgrade their damage (10 x 20%).
+    - [space-age] Added recipe to produce uranium-238 with larva egg (Fusion Assembling Machine).
+    - [space-age] Added recipe to produce promethium science pack with larva egg (Fusion Assembling Machine).
+    - [space-age] Added recipe to produce military science pack with larva egg (Chemical Plant).
+    - [space-age] Added Synthetic Hatchery for player to build zerg units.
+    - [space-age] Added Synthetic zerglings, hydralisk, mutalisk, guardian, infested terran and ultralisk as playable units. They are not repairable.
+    - [space-age] Added Synthetic zerg damage research to upgrade their damage (10 x 20%).
     - Synthetic zerg units support team color.

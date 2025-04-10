@@ -15,5 +15,5 @@ This mod does not add prototype or handle game logic by itself.  It's done in th
 - Added zerg damage research to upgrade their damage (10 tiers, up to 200% increase).
 
 # Implementation Guide
-See erm_zerg's prototypes/economy.lua
+https://github.com/heyqule/erm_zerg/blob/main/prototypes/economy.lua
 
