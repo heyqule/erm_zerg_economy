@@ -185,7 +185,7 @@ function ZergItemRecipe.hatchery(prefix, ingredients)
         name = 'hatchery',
         energy_required = 60,
         ingredients = ingredients,
-        category = "erm_controllable_buildings",
+        category = "crafting",
         amount = 1
     })
 end
