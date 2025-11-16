@@ -19,13 +19,13 @@ local name = "guardian"
 
 -- Hitpoints
 
-local hitpoint = 250
+local hitpoint = 300
 
 local resistances = 75
 
 -- Handles damages
 
-local damage_modifier = 40
+local damage_modifier = 45
 local distraction_cooldown = 30
 
 

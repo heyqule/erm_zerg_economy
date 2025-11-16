@@ -15,9 +15,9 @@ local AnimationDB = require("__erm_zerg_hd_assets__/animation_db")
 local name = "hydralisk"
 
 
-local hitpoint = 120
+local hitpoint = 200
 
-local resistances = 72
+local resistances = 75
 local damage_modifier = 70
 local distraction_cooldown = 30
 

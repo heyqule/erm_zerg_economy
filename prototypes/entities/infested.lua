@@ -14,7 +14,7 @@ local ZergSound = require("__erm_zerg_hd_assets__/sound")
 local AnimationDB = require("__erm_zerg_hd_assets__/animation_db")
 local name = "infested"
 
-local hitpoint = 78
+local hitpoint = 125
 
 local resistances = 75
 

@@ -14,8 +14,8 @@ local ZergSound = require("__erm_zerg_hd_assets__/sound")
 local AnimationDB = require("__erm_zerg_hd_assets__/animation_db")
 local name = "zergling"
 
-local hitpoint = 75
-local resistances = 72
+local hitpoint = 90
+local resistances = 75
 
 
 local movement_speed = 0.35

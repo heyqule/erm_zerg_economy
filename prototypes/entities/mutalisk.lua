@@ -18,7 +18,7 @@ local name = "mutalisk"
 
 -- Hitpoints
 
-local hitpoint = 160
+local hitpoint = 220
 
 local resistances = 75
 

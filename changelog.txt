@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2025-11-16
+
+  Changes:
+    - Increased HP on playable units.  
+    - Zergling 750 -> 900
+    - Ultralisk 4000 -> 4500
+    - Mutalisk 1600 -> 2200
+    - Infested 780 -> 1250
+    - Hydralisk 1200 -> 2000
+    - Guardian 2500 -> 3000
+    - zergling & hydralisk overall resistance: 72 -> 75
+    - Increased guardian damage multiplier from 40 to 45.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 2025-06-28
 

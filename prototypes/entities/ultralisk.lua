@@ -15,7 +15,7 @@ local AnimationDB = require("__erm_zerg_hd_assets__/animation_db")
 local name = "ultralisk"
 
 
-local hitpoint = 400
+local hitpoint = 450
 
 local resistances = 80
 
