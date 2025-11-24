@@ -422,6 +422,7 @@ function ZergLarva.create_tech(name)
                     recipe = name.."-to-promethium"
                 }
             },
+            prerequisites = {"biochamber"},
             research_trigger =
             {
                 type = "build-entity",
