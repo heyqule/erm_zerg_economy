@@ -1,15 +1,15 @@
 {
   "name": "erm_zerg_economy",
-  "version": "1.0.4",
+  "version": "2.1",
   "date": "2025-04-11",
   "title": "ERM - Zerg Economy",
   "author": "heyqule",
   "description": "Internal Library for ERM zerg economy.  It does nothing by itself.",
-  "factorio_version": "2.0",
+  "factorio_version": "2.1",
   "dependencies": [
-    "base >= 2.0.72",
-    "?space-age >= 2.0.0",
-    "enemyracemanager >= 2.0.46",
-    "erm_zerg_hd_assets >= 2.0.3"
+    "base >= 2.1.0",
+    "?space-age >= 2.1.0",
+    "enemyracemanager >= 2.1.0",
+    "erm_zerg_hd_assets >= 2.1.0"
   ]
 }

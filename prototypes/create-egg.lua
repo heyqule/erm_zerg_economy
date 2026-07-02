@@ -99,7 +99,7 @@ function ZergLarva.create_larva_egg_duplication_recipe(name, additional_ingredie
              type = "recipe",
              name = name.."-clone",
              icon = "__erm_zerg_hd_assets__/graphics/entity/icons/items/larva_egg.png",
-             category = "organic",
+             categories = {"organic"},
              subgroup = "erm-egg-processes",
              order = "x["..name.."]-a[larva]",
              hide_from_player_crafting = false,
@@ -111,7 +111,7 @@ function ZergLarva.create_larva_egg_duplication_recipe(name, additional_ingredie
              {
                  {type = "item", name = name, amount = 4}
              },
-             result_is_always_fresh = false,
+             always_fresh = false,
              allow_productivity = true,
              allow_quality = false,
              enabled = false,
@@ -142,7 +142,7 @@ function ZergLarva.create_larva_egg_fresh_duplication_recipe(name, additional_in
             type = "recipe",
             name = name.."-fresh-clone",
             icon = "__erm_zerg_hd_assets__/graphics/entity/icons/items/larva_egg.png",
-            category = "organic",
+            categories = {"organic"},
             subgroup = "erm-egg-processes",
             order = "x["..name.."]-a[larva]",
             hide_from_player_crafting = false,
@@ -154,7 +154,7 @@ function ZergLarva.create_larva_egg_fresh_duplication_recipe(name, additional_in
             {
                 {type = "item", name = name, amount = 1}
             },
-            result_is_always_fresh = true,
+            always_fresh = true,
             allow_productivity = false,
             allow_quality = false,
             enabled = false,
@@ -189,7 +189,7 @@ function ZergLarva.create_larva_egg_to_nutrients_recipe(name, nutrients_amount, 
                     shift = {9, 9}
                 },
             },
-            category = "organic",
+            categories = {"organic"},
             subgroup = "erm-egg-processes",
             order = "x["..name.."]-a[egg-nutrients]",
             hide_from_player_crafting = false,
@@ -241,7 +241,7 @@ function ZergLarva.create_larva_egg_to_biter_egg_recipe(name, additional_ingredi
                 shift = {9, 9}
             },
         },
-        category = "organic",
+        categories = {"organic"},
         subgroup = "erm-egg-processes",
         order = "x["..name.."]-a[egg-nutrients]",
         hide_from_player_crafting = false,
@@ -281,7 +281,7 @@ function ZergLarva.create_larva_egg_to_uranium238_recipe(name)
                     shift = {9, 9}
                 },
             },
-            category = "fusion-assembly",
+            categories = {"fusion-assembly"},
             subgroup = "erm-egg-processes",
             order = "x["..name.."]-a[uranium-238]",
             hide_from_player_crafting = false,
@@ -323,7 +323,7 @@ function ZergLarva.create_larva_egg_to_military_recipe(name, color_tint)
                     shift = {9, 9}
                 },
             },
-            category = "chemistry",
+            categories = {"chemistry"},
             subgroup = "erm-egg-processes",
             order = "x["..name.."]-a[military]",
             hide_from_player_crafting = false,
@@ -367,7 +367,7 @@ function ZergLarva.create_larva_egg_to_promethium_recipe(name)
                     shift = {9, 9}
                 },
             },
-            category = "fusion-assembly",
+            categories = {"fusion-assembly"},
             subgroup = "erm-egg-processes",
             order = "x["..name.."]-a[promethium]",
             hide_from_player_crafting = false,

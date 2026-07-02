@@ -23,7 +23,7 @@ function ZergItemRecipe.zergling(prefix, ingredients)
         name = 'zergling',
         energy_required = 24,
         ingredients = ingredients,
-        category = prefix.."--erm_controllable",
+        categories = {prefix.."--erm_controllable"},
         amount = 2
     })
 
@@ -31,7 +31,7 @@ function ZergItemRecipe.zergling(prefix, ingredients)
         prefix = prefix,
         name = 'zergling',
         icon = "__erm_zerg_hd_assets__/graphics/entity/icons/units/zergling.png",
-        category = prefix.."--erm_controllable",
+        categories = {prefix.."--erm_controllable"},
     })
 end
 
@@ -50,7 +50,7 @@ function ZergItemRecipe.hydralisk(prefix, ingredients)
         name = 'hydralisk',
         energy_required = 25,
         ingredients = ingredients,
-        category = prefix.."--erm_controllable",
+        categories = {prefix.."--erm_controllable"},
         amount = 1
     })
 
@@ -58,7 +58,7 @@ function ZergItemRecipe.hydralisk(prefix, ingredients)
         prefix = prefix,
         name = 'hydralisk',
         icon = "__erm_zerg_hd_assets__/graphics/entity/icons/units/hydralisk.png",
-        category = prefix.."--erm_controllable",
+        categories = {prefix.."--erm_controllable"},
     })
 end
 
@@ -77,7 +77,7 @@ function ZergItemRecipe.mutalisk(prefix, ingredients)
         name = 'mutalisk',
         energy_required = 30,
         ingredients = ingredients,
-        category = prefix.."--erm_controllable",
+        categories = {prefix.."--erm_controllable"},
         amount = 1
     })
 
@@ -85,7 +85,7 @@ function ZergItemRecipe.mutalisk(prefix, ingredients)
         prefix = prefix,
         name = 'mutalisk',
         icon = "__erm_zerg_hd_assets__/graphics/entity/icons/units/mutalisk.png",
-        category = prefix.."--erm_controllable",
+        categories = {prefix.."--erm_controllable"},
     })
 end
 
@@ -104,7 +104,7 @@ function ZergItemRecipe.guardian(prefix, ingredients)
         name = 'guardian',
         energy_required = 60,
         ingredients = ingredients,
-        category = prefix.."--erm_controllable",
+        categories = {prefix.."--erm_controllable"},
         amount = 1
     })
 
@@ -112,7 +112,7 @@ function ZergItemRecipe.guardian(prefix, ingredients)
         prefix = prefix,
         name = 'guardian',
         icon = "__erm_zerg_hd_assets__/graphics/entity/icons/units/guardian.png",
-        category = prefix.."--erm_controllable",
+        categories = {prefix.."--erm_controllable"},
     })
 end
 
@@ -131,7 +131,7 @@ function ZergItemRecipe.infested(prefix, ingredients)
         name = 'infested',
         energy_required = 30,
         ingredients = ingredients,
-        category = prefix.."--erm_controllable",
+        categories = {prefix.."--erm_controllable"},
         amount = 1
     })
 
@@ -139,7 +139,7 @@ function ZergItemRecipe.infested(prefix, ingredients)
         prefix = prefix,
         name = 'infested',
         icon = "__erm_zerg_hd_assets__/graphics/entity/icons/units/infested.png",
-        category = prefix.."--erm_controllable",
+        categories = {prefix.."--erm_controllable"},
     })
 end
 
@@ -158,7 +158,7 @@ function ZergItemRecipe.ultralisk(prefix, ingredients)
         name = 'ultralisk',
         energy_required = 60,
         ingredients = ingredients,
-        category = prefix.."--erm_controllable",
+        categories = {prefix.."--erm_controllable"},
         amount = 1
     })
 
@@ -166,7 +166,7 @@ function ZergItemRecipe.ultralisk(prefix, ingredients)
         prefix = prefix,
         name = 'ultralisk',
         icon = "__erm_zerg_hd_assets__/graphics/entity/icons/units/ultralisk.png",
-        category = prefix.."--erm_controllable",
+        categories = {prefix.."--erm_controllable"},
     })
 end
 
@@ -185,7 +185,7 @@ function ZergItemRecipe.hatchery(prefix, ingredients)
         name = 'hatchery',
         energy_required = 60,
         ingredients = ingredients,
-        category = "crafting",
+        categories = {"crafting"},
         amount = 1
     })
 end
