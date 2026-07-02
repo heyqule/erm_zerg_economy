@@ -91,7 +91,11 @@ function Unit.make(prefix, hp_mp, damage_mp)
             dying_sound = ZergSound.enemy_death(name, 0.9),
             map_color = ERM_UnitTint.tint_army_color(),
             enemy_map_color = { r=1, b=0, g=0 },
-            corpse = name .. "-corpse"
+            corpse = name .. "-corpse",
+            --steering =   {
+            --    move = { radius = 2},
+            --    stay = { radius = 3}
+            --}
         },
         {
             type = "corpse",

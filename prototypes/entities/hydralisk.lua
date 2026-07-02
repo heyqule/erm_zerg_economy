@@ -25,20 +25,21 @@ local distraction_cooldown = 30
 local collision_box = { { -0.25, -0.25 }, { 0.25, 0.25 } }
 local selection_box = { { -0.75, -0.75 }, { 0.75, 0.75 } }
 
-local running_animation = AnimationDB.get_layered_animations("units", name, "run")
-running_animation = AnimationDB.apply_runtime_tint(running_animation, true)
-
-local attack_animation = AnimationDB.get_layered_animations("units", name, "attack")
-attack_animation = AnimationDB.apply_runtime_tint(attack_animation, true)
-
 local Unit = {}
 
 function Unit.make(prefix, hp_mp, damage_mp)
     local attack_range = ERMPlayerUnitHelper.get_attack_range(0.75)
     local vision_distance = ERMPlayerUnitHelper.get_vision_distance(attack_range)
+    
+    local running_animation = AnimationDB.get_layered_animations("units", name, "run")
+    running_animation = AnimationDB.apply_runtime_tint(running_animation, true)
+    
     local attack_animation =  AnimationDB.get_layered_animations("units", name, "attack")
+    attack_animation = AnimationDB.apply_runtime_tint(attack_animation, true)
+    
     local split_animation =  AnimationDB.get_single_animation("projectiles", name,"attack_attachment")
     table.insert(attack_animation["layers"], 2, split_animation)
+    
     data:extend({
         {
             type = "unit",
