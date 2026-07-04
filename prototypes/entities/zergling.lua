@@ -92,10 +92,15 @@ function Unit.make(prefix, hp_mp, damage_mp)
             map_color = ERM_UnitTint.tint_army_color(),
             enemy_map_color = { r=1, b=0, g=0 },
             corpse = name .. "-corpse",
-            --steering =   {
-            --    move = { radius = 2},
-            --    stay = { radius = 3}
-            --}
+            steering = {
+                force_unit_fuzzy_goto_behavior = true,
+                move = {
+                    radius = 3
+                },
+                stay = {
+                    radius = 5.25
+                },
+            },
         },
         {
             type = "corpse",

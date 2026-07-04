@@ -132,7 +132,16 @@ function Unit.make(prefix, hp_mp, damage_mp, SDA)
             distance_per_frame = 0.24,
             run_animation = running_animation,
             dying_sound = ZergSound.infested_death(1),
-            corpse = name .. "-corpse"
+            corpse = name .. "-corpse",
+            steering = {
+                force_unit_fuzzy_goto_behavior = true,
+                move = {
+                    radius = 3
+                },
+                stay = {
+                    radius = 5.25
+                },
+            },
         },
         {
             type = "corpse",
