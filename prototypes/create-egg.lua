@@ -8,14 +8,13 @@
 local FusionEconomy = require("__erm_libs__/prototypes/fusion_economy_helper")
 local space_age_item_sounds = require("__space-age__.prototypes.item_sounds")
 
-
 local ZergLarva = {}
 
 local function get_secondary_color(color)
     color = util.table.deepcopy(color)
-    local limit = (240/255)
-    local change_r = 60/255
-    local change_g = 32/255
+    local limit = (240 / 255)
+    local change_r = 60 / 255
+    local change_g = 32 / 255
     if color.r + change_r < limit then
         color.r = color.r + change_r
     end
@@ -85,42 +84,40 @@ function ZergLarva.create_larva_egg_duplication_recipe(name, additional_ingredie
     color_tint = util.table.deepcopy(color_tint)
     color_tint.a = 1
     local ingredients = {
-        {type = "item", name = name, amount = 2}
+        { type = "item", name = name, amount = 2 }
     }
-    
+
     if additional_ingredients then
         for _, ind in pairs(additional_ingredients) do
             table.insert(ingredients, ind)
-        end            
+        end
     end
 
     data.extend({
         {
-             type = "recipe",
-             name = name.."-clone",
-             icon = "__erm_zerg_hd_assets__/graphics/entity/icons/items/larva_egg.png",
-             categories = {"organic"},
-             subgroup = "erm-egg-processes",
-             order = "x["..name.."]-a[larva]",
-             hide_from_player_crafting = false,
-             auto_recycle = false,
-             preserve_products_in_machine_output = true,
-             energy_required = 10,
-             ingredients = ingredients,
-             results =
-             {
-                 {type = "item", name = name, amount = 4}
-             },
-             always_fresh = false,
-             allow_productivity = true,
-             allow_quality = false,
-             enabled = false,
-             crafting_machine_tint =
-             {
-                 primary = color_tint,
-                 secondary = get_secondary_color(color_tint),
-             },
-         }
+            type = "recipe",
+            name = name .. "-clone",
+            icon = "__erm_zerg_hd_assets__/graphics/entity/icons/items/larva_egg.png",
+            categories = { "organic" },
+            subgroup = "erm-egg-processes",
+            order = "x[" .. name .. "]-a[larva]",
+            hide_from_player_crafting = false,
+            auto_recycle = false,
+            preserve_products_in_machine_output = true,
+            energy_required = 10,
+            ingredients = ingredients,
+            results = {
+                { type = "item", name = name, amount = 4 }
+            },
+            always_fresh = false,
+            allow_productivity = true,
+            allow_quality = false,
+            enabled = false,
+            crafting_machine_tint = {
+                primary = color_tint,
+                secondary = get_secondary_color(color_tint),
+            },
+        }
     })
 end
 
@@ -128,7 +125,7 @@ function ZergLarva.create_larva_egg_fresh_duplication_recipe(name, additional_in
     color_tint = util.table.deepcopy(color_tint)
     color_tint.a = 1
     local ingredients = {
-        {type = "item", name = name, amount = 50}
+        { type = "item", name = name, amount = 50 }
     }
 
     if additional_ingredients then
@@ -140,33 +137,30 @@ function ZergLarva.create_larva_egg_fresh_duplication_recipe(name, additional_in
     data.extend({
         {
             type = "recipe",
-            name = name.."-fresh-clone",
+            name = name .. "-fresh-clone",
             icon = "__erm_zerg_hd_assets__/graphics/entity/icons/items/larva_egg.png",
-            categories = {"organic"},
+            categories = { "organic" },
             subgroup = "erm-egg-processes",
-            order = "x["..name.."]-a[larva]",
+            order = "x[" .. name .. "]-a[larva]",
             hide_from_player_crafting = false,
             auto_recycle = false,
             preserve_products_in_machine_output = true,
             energy_required = 30,
             ingredients = ingredients,
-            results =
-            {
-                {type = "item", name = name, amount = 1}
+            results = {
+                { type = "item", name = name, amount = 1 }
             },
             always_fresh = true,
             allow_productivity = false,
             allow_quality = false,
             enabled = false,
-            crafting_machine_tint =
-            {
+            crafting_machine_tint = {
                 primary = color_tint,
                 secondary = get_secondary_color(color_tint),
             },
         }
     })
 end
-
 
 function ZergLarva.create_larva_egg_to_nutrients_recipe(name, nutrients_amount, color_tint)
     color_tint = util.table.deepcopy(color_tint)
@@ -174,39 +168,38 @@ function ZergLarva.create_larva_egg_to_nutrients_recipe(name, nutrients_amount, 
     data.extend({
         {
             type = "recipe",
-            name = name.."-to-nutrients",
+            name = name .. "-to-nutrients",
             icons = {
                 {
                     icon = "__erm_zerg_hd_assets__/graphics/entity/icons/items/larva_egg.png",
                     icon_size = 64,
                     scale = 0.5,
-                    shift = {-9,-9}
+                    shift = { -9, -9 }
                 },
                 {
                     icon = "__space-age__/graphics/icons/nutrients.png",
                     icon_size = 64,
                     scale = 0.5,
-                    shift = {9, 9}
+                    shift = { 9, 9 }
                 },
             },
-            categories = {"organic"},
+            categories = { "organic" },
             subgroup = "erm-egg-processes",
-            order = "x["..name.."]-a[egg-nutrients]",
+            order = "x[" .. name .. "]-a[egg-nutrients]",
             hide_from_player_crafting = false,
             auto_recycle = false,
             enabled = false,
             energy_required = 2,
-            ingredients = {{type = "item", name = name, amount = 1}},
-            results = {{type="item", name="nutrients", amount= nutrients_amount}},
+            ingredients = { { type = "item", name = name, amount = 1 } },
+            results = { { type = "item", name = "nutrients", amount = nutrients_amount } },
             allow_productivity = true,
             allow_quality = false,
-            crafting_machine_tint =
-            {
+            crafting_machine_tint = {
                 primary = color_tint,
                 secondary = get_secondary_color(color_tint),
             },
         }
-        
+
     })
 end
 
@@ -214,7 +207,7 @@ function ZergLarva.create_larva_egg_to_biter_egg_recipe(name, additional_ingredi
     color_tint = util.table.deepcopy(color_tint)
     color_tint.a = 1
     local ingredients = {
-        {type = "item", name = name, amount = 1}
+        { type = "item", name = name, amount = 1 }
     }
 
     if additional_ingredients then
@@ -224,82 +217,80 @@ function ZergLarva.create_larva_egg_to_biter_egg_recipe(name, additional_ingredi
     end
 
     data.extend({
-    {
-        type = "recipe",
-        name = name.."-to-biter-egg",
-        icons = {
-            {
-                icon = "__erm_zerg_hd_assets__/graphics/entity/icons/items/larva_egg.png",
-                icon_size = 64,
-                scale = 0.5,
-                shift = {-9,-9}
-            },
-            {
-                icon = "__space-age__/graphics/icons/biter-egg.png",
-                icon_size = 64,
-                scale = 0.5,
-                shift = {9, 9}
-            },
-        },
-        categories = {"organic"},
-        subgroup = "erm-egg-processes",
-        order = "x["..name.."]-a[egg-nutrients]",
-        hide_from_player_crafting = false,
-        auto_recycle = false,
-        enabled = false,
-        energy_required = 5,
-        ingredients = ingredients,
-        results = {{type="item", name="biter-egg", amount=1}},
-        allow_productivity = true,
-        allow_quality = false,
-        crafting_machine_tint =
         {
-            primary = color_tint,
-            secondary = get_secondary_color(color_tint),
-        },
-    }})
+            type = "recipe",
+            name = name .. "-to-biter-egg",
+            icons = {
+                {
+                    icon = "__erm_zerg_hd_assets__/graphics/entity/icons/items/larva_egg.png",
+                    icon_size = 64,
+                    scale = 0.5,
+                    shift = { -9, -9 }
+                },
+                {
+                    icon = "__space-age__/graphics/icons/biter-egg.png",
+                    icon_size = 64,
+                    scale = 0.5,
+                    shift = { 9, 9 }
+                },
+            },
+            categories = { "organic" },
+            subgroup = "erm-egg-processes",
+            order = "x[" .. name .. "]-a[egg-nutrients]",
+            hide_from_player_crafting = false,
+            auto_recycle = false,
+            enabled = false,
+            energy_required = 5,
+            ingredients = ingredients,
+            results = { { type = "item", name = "biter-egg", amount = 1 } },
+            allow_productivity = true,
+            allow_quality = false,
+            crafting_machine_tint = {
+                primary = color_tint,
+                secondary = get_secondary_color(color_tint),
+            },
+        } })
 end
-
 
 function ZergLarva.create_larva_egg_to_uranium238_recipe(name)
     FusionEconomy.init()
     data.extend({
         {
             type = "recipe",
-            name = name.."-to-uranium",
+            name = name .. "-to-uranium",
             icons = {
                 {
                     icon = "__erm_zerg_hd_assets__/graphics/entity/icons/items/larva_egg.png",
                     icon_size = 64,
                     scale = 0.5,
-                    shift = {-9,-9}
+                    shift = { -9, -9 }
                 },
                 {
                     icon = "__base__/graphics/icons/uranium-ore.png",
                     icon_size = 64,
                     scale = 0.5,
-                    shift = {9, 9}
+                    shift = { 9, 9 }
                 },
             },
-            categories = {"fusion-assembly"},
+            categories = { "fusion-assembly" },
             subgroup = "erm-egg-processes",
-            order = "x["..name.."]-a[uranium-238]",
+            order = "x[" .. name .. "]-a[uranium-238]",
             hide_from_player_crafting = false,
             auto_recycle = false,
             enabled = false,
             energy_required = 20,
             ingredients = {
-                {type="item", name= name, amount=1},
-                {type="item", name="uranium-238", amount = 10, ignored_by_stats = 10, ignored_by_productivity = 10},
-                {type="fluid", name="fusion-plasma", amount = 2}
+                { type = "item", name = name, amount = 1 },
+                { type = "item", name = "uranium-238", amount = 10, ignored_by_stats = 10, ignored_by_productivity = 10 },
+                { type = "fluid", name = "fusion-plasma", amount = 2 }
             },
             results = {
-                {type = "item", name = "uranium-238", amount = 11, ignored_by_stats = 10, ignored_by_productivity = 10},
-                {type= "fluid", name="fluoroketone-hot", amount= 2, temperature = 180, ignored_by_stats = 2, ignored_by_productivity = 2}
+                { type = "item", name = "uranium-238", amount = 11, ignored_by_stats = 10, ignored_by_productivity = 10 },
+                { type = "fluid", name = "fluoroketone-hot", amount = 2, temperature = 180, ignored_by_stats = 2, ignored_by_productivity = 2 }
             },
             allow_productivity = true,
             allow_quality = false,
-        }})
+        } })
 end
 
 function ZergLarva.create_larva_egg_to_military_recipe(name, color_tint)
@@ -308,43 +299,42 @@ function ZergLarva.create_larva_egg_to_military_recipe(name, color_tint)
     data.extend({
         {
             type = "recipe",
-            name = name.."-to-military",
+            name = name .. "-to-military",
             icons = {
                 {
                     icon = "__erm_zerg_hd_assets__/graphics/entity/icons/items/larva_egg.png",
                     icon_size = 64,
                     scale = 0.5,
-                    shift = {-9,-9}
+                    shift = { -9, -9 }
                 },
                 {
                     icon = "__base__/graphics/icons/military-science-pack.png",
                     icon_size = 64,
                     scale = 0.5,
-                    shift = {9, 9}
+                    shift = { 9, 9 }
                 },
             },
-            categories = {"chemistry"},
+            categories = { "chemistry" },
             subgroup = "erm-egg-processes",
-            order = "x["..name.."]-a[military]",
+            order = "x[" .. name .. "]-a[military]",
             hide_from_player_crafting = false,
             auto_recycle = false,
             enabled = false,
             energy_required = 10,
             ingredients = {
-                {type="item", name= name, amount = 2},
-                {type="item", name="military-science-pack", amount = 10},
+                { type = "item", name = name, amount = 2 },
+                { type = "item", name = "military-science-pack", amount = 10 },
             },
             results = {
-                {type = "item", name = "military-science-pack", amount = 11, ignored_by_stats = 10, ignored_by_productivity = 10},
+                { type = "item", name = "military-science-pack", amount = 11, ignored_by_stats = 10, ignored_by_productivity = 10 },
             },
             allow_productivity = true,
             allow_quality = false,
-            crafting_machine_tint =
-            {
+            crafting_machine_tint = {
                 primary = color_tint,
                 secondary = get_secondary_color(color_tint),
             },
-        }})
+        } })
 end
 
 function ZergLarva.create_larva_egg_to_promethium_recipe(name)
@@ -352,92 +342,148 @@ function ZergLarva.create_larva_egg_to_promethium_recipe(name)
     data.extend({
         {
             type = "recipe",
-            name = name.."-to-promethium",
+            name = name .. "-to-promethium",
             icons = {
                 {
                     icon = "__erm_zerg_hd_assets__/graphics/entity/icons/items/larva_egg.png",
                     icon_size = 64,
                     scale = 0.5,
-                    shift = {-9,-9}
+                    shift = { -9, -9 }
                 },
                 {
                     icon = "__space-age__/graphics/icons/promethium-science-pack.png",
                     icon_size = 64,
                     scale = 0.5,
-                    shift = {9, 9}
+                    shift = { 9, 9 }
                 },
             },
-            categories = {"fusion-assembly"},
+            categories = { "fusion-assembly" },
             subgroup = "erm-egg-processes",
-            order = "x["..name.."]-a[promethium]",
+            order = "x[" .. name .. "]-a[promethium]",
             hide_from_player_crafting = false,
             auto_recycle = false,
             enabled = false,
             energy_required = 10,
             ingredients = {
-                {type="item", name= name, amount = 10},
-                {type = "item", name = "promethium-science-pack", amount = 10},
-                {type="fluid", name="fusion-plasma", amount = 1}
+                { type = "item", name = name, amount = 10 },
+                { type = "item", name = "promethium-science-pack", amount = 10 },
+                { type = "fluid", name = "fusion-plasma", amount = 1 }
             },
             results = {
-                {type = "item", name = "promethium-science-pack", amount = 12, ignored_by_stats = 10, ignored_by_productivity = 10},
-                {type= "fluid", name="fluoroketone-hot", amount = 1, temperature = 180, ignored_by_stats = 1, ignored_by_productivity = 1}
+                { type = "item", name = "promethium-science-pack", amount = 12, ignored_by_stats = 10, ignored_by_productivity = 10 },
+                { type = "fluid", name = "fluoroketone-hot", amount = 1, temperature = 180, ignored_by_stats = 1, ignored_by_productivity = 1 }
             },
             allow_productivity = true,
             allow_quality = false,
-        }})
+        } })
 end
 
-function ZergLarva.create_tech(name)
+function ZergLarva.create_tech(name, max_productivity)
+    max_productivity = max_productivity or 5
     data.extend({
         {
             type = "technology",
-            name = name.."-processing",
+            name = name .. "-processing",
             icon = "__erm_zerg_hd_assets__/graphics/entity/icons/items/larva_egg.png",
             icon_size = 64,
-            effects =
-            {
+            effects = {
                 {
                     type = "unlock-recipe",
-                    recipe = name.."-clone"
+                    recipe = name .. "-clone"
                 },
                 {
                     type = "unlock-recipe",
-                    recipe = name.."-fresh-clone"
+                    recipe = name .. "-fresh-clone"
                 },
                 {
                     type = "unlock-recipe",
-                    recipe = name.."-to-nutrients"
+                    recipe = name .. "-to-nutrients"
                 },
                 {
                     type = "unlock-recipe",
-                    recipe = name.."-to-biter-egg"
+                    recipe = name .. "-to-biter-egg"
                 },
                 {
                     type = "unlock-recipe",
-                    recipe = name.."-to-uranium"
+                    recipe = name .. "-to-uranium"
                 },
                 {
                     type = "unlock-recipe",
-                    recipe = name.."-to-promethium"
+                    recipe = name .. "-to-promethium"
                 }
             },
-            prerequisites = {"biochamber"},
-            research_trigger =
-            {
+            prerequisites = { "biochamber" },
+            research_trigger = {
                 type = "build-entity",
                 entity = "biochamber"
             }
-        }
+        },
     })
+
+--- Assign the producitivity tech name to race_settings.boss_tech_upgrade_name under control.lua.  It lets
+--- boss processor to upgrade the tech.  Each level must be a separated tech to use for script trigger,  since max_level doesn't work
+    for i = 1, max_productivity, 1 do
+        data.extend({
+            {
+                type = "technology",
+                name = name .. "-productivity-"..i,
+                localised_name = {"technology-name."..name.."-productivity", tostring(i)},
+                order = name .. "-productivity-"..i,
+                icon = "__erm_zerg_hd_assets__/graphics/entity/icons/items/larva_egg.png",
+                icon_size = 64,
+                effects = {
+                    {
+                        type = "change-recipe-productivity",
+                        recipe = name .. "-to-promethium",
+                        change = 0.1
+                    },
+                    {
+                        type = "change-recipe-productivity",
+                        recipe = name .. "-to-uranium",
+                        change = 0.05,
+                    },
+                    {
+                        type = "change-recipe-productivity",
+                        recipe = name .. "-to-military",
+                        change = 0.1
+                    },
+                    {
+                        type = "change-recipe-productivity",
+                        recipe = name .. "-to-nutrients",
+                        change = 0.1,
+                    },
+                    {
+                        type = "change-recipe-productivity",
+                        recipe = name .. "-to-biter-egg",
+                        change = 0.1,
+                    },
+                    {
+                        type = "change-recipe-productivity",
+                        recipe = name .. "-clone",
+                        change = 0.2,
+                    },
+                    {
+                        type = "change-recipe-productivity",
+                        recipe = name .. "-fresh-clone",
+                        change = 0.2,
+                    },
+                },
+                prerequisites = { name .. "-processing" },
+                research_trigger = {
+                    type = "scripted",
+                    trigger_description = { "technology-description.erm-boss-productivity-tech" }
+                },
+                upgrade = true
+            }
+        })
+    end
 
     if data.raw.technology["military-science-pack"] then
         table.insert(data.raw.technology["military-science-pack"].effects, {
             type = "unlock-recipe",
-            recipe = name.."-to-military"
+            recipe = name .. "-to-military"
         })
     end
 end
-
 
 return ZergLarva
