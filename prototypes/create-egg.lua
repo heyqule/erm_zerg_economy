@@ -103,7 +103,7 @@ function ZergLarva.create_larva_egg_duplication_recipe(name, additional_ingredie
             order = "x[" .. name .. "]-a[larva]",
             hide_from_player_crafting = false,
             auto_recycle = false,
-            preserve_products_in_machine_output = true,
+            preserve_products_in_machine_output = false,
             energy_required = 10,
             ingredients = ingredients,
             results = {
@@ -125,7 +125,7 @@ function ZergLarva.create_larva_egg_fresh_duplication_recipe(name, additional_in
     color_tint = util.table.deepcopy(color_tint)
     color_tint.a = 1
     local ingredients = {
-        { type = "item", name = name, amount = 50 }
+        { type = "item", name = name, amount = 20 }
     }
 
     if additional_ingredients then
@@ -151,7 +151,7 @@ function ZergLarva.create_larva_egg_fresh_duplication_recipe(name, additional_in
                 { type = "item", name = name, amount = 1 }
             },
             always_fresh = true,
-            allow_productivity = false,
+            allow_productivity = true,
             allow_quality = false,
             enabled = false,
             crafting_machine_tint = {
